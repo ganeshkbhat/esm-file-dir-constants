@@ -1,0 +1,48 @@
+{
+  "name": "esm-constants",
+  "version": "1.0.0",
+  "description": "work with esm filepath dirname constants in imports",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    "require": "./index.js",
+    "import": "./index.mjs"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec --recursive --timeout 60000"
+  },
+  "pre-commit": {
+    "run": [
+      "test"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "browserify": "^17.0.0",
+    "chai": "^4.4.1",
+    "mocha": "^10.2.0",
+    "pre-commit": "^1.2.2",
+    "pre-push": "^0.1.4",
+    "sinon": "^17.0.1",
+    "typescript": "^5.3.3",
+    "uglify-js": "^3.17.4",
+    "unimported": "^1.31.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ganeshkbhat/esm-file-dir-constants.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ganeshkbhat/esm-file-dir-constants/issues"
+  },
+  "homepage": "https://github.com/ganeshkbhat/esm-file-dir-constants#readme",
+  "keywords": [],
+  "author": "Ganesh B <ganeshsurfs@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "which-platform": "^1.0.0"
+  }
+}
