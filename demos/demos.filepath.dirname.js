@@ -17,5 +17,4 @@
 
 
 import { getDirname as gd, getFilename as gf } from "../src/polyfill.__dirname.regex.js";
-
 import { default as getpaths } from "../index.js";
