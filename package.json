@@ -1,7 +1,7 @@
 {
   "name": "esm-constants",
   "version": "1.0.0",
-  "description": "work with esm filepath dirname constants in imports",
+  "description": "work with esm __filepath and __dirname pathing constants in imports as in commonjs nodejs environment",
   "main": "index.js",
   "type": "module",
   "exports": {
