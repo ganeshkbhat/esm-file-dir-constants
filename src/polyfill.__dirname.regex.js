@@ -15,7 +15,6 @@
 
 'use strict';
 
-// https://github.com/JumpLink/cross-dirname/blob/main/src/index.ts
 const DIRNAME_POSIX_REGEX = /^((?:\.(?![^\/]))|(?:(?:\/?|)(?:[\s\S]*?)))(?:\/+?|)(?:(?:\.{1,2}|[^\/]+?|)(?:\.[^.\/]*|))(?:[\/]*)$/;
 const DIRNAME_WIN32_REGEX = /^((?:\.(?![^\\]))|(?:(?:\\?|)(?:[\s\S]*?)))(?:\\+?|)(?:(?:\.{1,2}|[^\\]+?|)(?:\.[^.\\]*|))(?:[\\]*)$/;
 const EXTRACT_PATH_REGEX = /@?(?<path>[file:\/\/]?[^\(\s]+):[0-9]+:[0-9]+/;
@@ -104,4 +103,9 @@ export const getDirname = () => {
 export const getFilename = () => {
   let filename = getPath();
   return filename
+}
+
+export default {
+  getDirname,
+  getFilename
 }

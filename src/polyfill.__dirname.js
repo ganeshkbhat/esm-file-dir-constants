@@ -18,13 +18,15 @@
 import { dirname } from "path"
 import { fileURLToPath } from "url"
 
-const __dirname = dirname(fileURLToPath(import.meta.url))
+export function __dirname(dir) {
+  const _dirname = dirname(fileURLToPath(dir))
 
-if (!!global) {
-  globalThis.__dirname = __dirname;
-} else {
-  global.__dirname = __dirname;
+  if (!!global) {
+    globalThis.__dirname = _dirname;
+  } else {
+    global.__dirname = _dirname;
+  }
+  return _dirname
 }
 
 export default __dirname;
-

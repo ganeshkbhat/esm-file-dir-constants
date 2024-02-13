@@ -19,8 +19,8 @@
   "devDependencies": {
     "@types/node": "^20.11.16",
     "browserify": "^17.0.0",
-    "chai": "^4.4.1",
-    "mocha": "^10.2.0",
+    "chai": "^5.1.0",
+    "mocha": "^10.3.0",
     "pre-commit": "^1.2.2",
     "pre-push": "^0.1.4",
     "sinon": "^17.0.1",

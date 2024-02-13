@@ -15,15 +15,18 @@
 
 'use strict';
 
-import { dirname } from "path"
-import { fileURLToPath } from "url"
+import { dirname } from "path";
+import { fileURLToPath } from "url";
 
-const __filename = new URL(import.meta.url).pathname;
+export function __filename(file) {
+  const _filename = new URL(file).pathname;
 
-if (!!global) {
-  globalThis.__filename = __filename;
-} else {
-  global.__filename = __filename;
+  if (!!global) {
+    globalThis.__filename = _filename;
+  } else {
+    global.__filename = _filename;
+  }
+  return _filename;
 }
 
 export default __filename;

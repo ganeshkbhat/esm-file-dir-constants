@@ -16,8 +16,6 @@
 'use strict';
 
 
-import { default as f } from "../src/polyfill.__filename.js";
-import { default as d } from "../src/polyfill.__dirname.js";
 import { getDirname as gd, getFilename as gf } from "../src/polyfill.__dirname.regex.js";
 
 import { default as getpaths } from "../index.js";

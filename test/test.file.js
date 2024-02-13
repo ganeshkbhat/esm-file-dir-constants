@@ -4,7 +4,7 @@
  * Author: Ganesh B
  * Description: 
  * Install: npm i  --save
- * Github: https://github.com/ganeshkbhat/esm-file-dir-constants
+ * Github: https://github.com/ganeshkbhat/customevents
  * npmjs Link: https://www.npmjs.com/package/
  * File: 
  * File Description: 
@@ -15,39 +15,46 @@
 
 'use strict';
 
-// https://advancedweb.hu/modern-javascript-library-starter/
+import { expect } from 'chai';
+import { getDirname, getFilename } from "../index.js";
+// import { __filename, __dirname, getDirname, getFilename } from "../index.js";
 
-import test from "node:test";
-import { strict as assert } from "node:assert";
-import { test as lib } from "./index.js";
+import { dirname, normalize, resolve } from "path";
+import { fileURLToPath } from "url";
 
-import { default as __filename } from "../src/polyfill.__filename.js";
-import { default as __dirname } from "../src/polyfill.__dirname.js";
-import { getDirname, getFilename } from "../src/polyfill.__dirname.regex.js";
+// let file = new URL(import.meta.url).pathname;
+// let dir = dirname(fileURLToPath(import.meta.url));
 
+let file = process.cwd() + "\\test\\test.file.js";
+let dir = process.cwd() + "\\test";
 
-// test('synchronous passing test', (t) => {
-// 	const result = lib("World");
-//   assert.strictEqual(result, "Hello World");
-// });
+describe('[request tests] Tests to ', () => {
 
-test('check if __filename is defined', (t) => {
-  const result = __filename;
-  assert.strictEqual(result, __filename);
+  before(() => { });
+  after(() => { });
+
+  // it('should match the statically provided filepath from path received from __filename function', () => {
+  //   let actual = normalize(file);
+  //   let expected = __filename(import.meta.url);
+  //   expect(actual).to.equal(expected);
+  // });
+
+  it('should match the statically provided filepath from path received from getFilename function', () => {
+    let actual = file;
+    let expected = getFilename();
+    expect(actual).to.equal(expected);
+  });
+
+  // it('should match the statically provided filepath from path received from __dirname function', () => {
+  //   let actual = normalize(resolve(dir));
+  //   let expected = resolve(getDirname());
+  //   expect(actual).to.equal(expected);
+  // });
+
+  it('should match the statically provided filepath from path received from getDirname function', () => {
+    let actual = dir;
+    let expected = resolve(getDirname());
+    expect(actual).to.equal(expected);
+  });
+
 });
-
-test('check if __dirname is defined', (t) => {
-  const result = __dirname;
-  assert.strictEqual(result, __dirname);
-});
-
-test('check if getDirname is defined', (t) => {
-  const result = getDirname();
-  assert.strictEqual(result, __dirname);
-});
-
-test('check if getFilename is defined', (t) => {
-  const result = getFilename();
-  assert.strictEqual(result, __filename);
-});
-
