@@ -1,5 +1,5 @@
 # esm-constants
-work with esm filepath dirname constants in imports
+work with esm __filepath and __dirname pathing constants in imports as in commonjs nodejs environment
 
 Demos can be found in the folder [demos](https://github.com/ganeshkbhat/esm-file-dir-constants/tree/main/demos)
 
