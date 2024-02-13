@@ -1,5 +1,5 @@
 {
-  "name": "esmconstants",
+  "name": "esm-consts",
   "version": "1.0.0",
   "description": "work with esm __filepath and __dirname pathing constants in imports as in commonjs nodejs environment",
   "main": "index.js",
@@ -39,7 +39,14 @@
     "url": "https://github.com/ganeshkbhat/esm-file-dir-constants/issues"
   },
   "homepage": "https://github.com/ganeshkbhat/esm-file-dir-constants#readme",
-  "keywords": [],
+  "keywords": [
+    "work with esm __filepath and __dirname pathing constants in imports as in commonjs nodejs environment",
+    "__filename",
+    "__dirname",
+    "constants",
+    "esm",
+    "commonjs"
+  ],
   "author": "Ganesh B <ganeshsurfs@gmail.com>",
   "license": "MIT",
   "dependencies": {
